@@ -1,0 +1,39 @@
+2024-03-05T01:22:56.585+05:30  INFO 19764 --- [main] com.harshproject.HelmdemoApplication     : Starting HelmdemoApplication using Java 17.0.9 with PID 19764 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo)
+2024-03-05T01:22:56.591+05:30  INFO 19764 --- [main] com.harshproject.HelmdemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-03-05T01:22:58.695+05:30  INFO 19764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-05T01:22:58.715+05:30  INFO 19764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-05T01:22:58.717+05:30  INFO 19764 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-05T01:22:58.859+05:30  INFO 19764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-05T01:22:58.860+05:30  INFO 19764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2138 ms
+2024-03-05T01:22:59.545+05:30  INFO 19764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-05T01:22:59.557+05:30  INFO 19764 --- [main] com.harshproject.HelmdemoApplication     : Started HelmdemoApplication in 3.895 seconds (process running for 4.678)
+2024-03-05T01:24:42.892+05:30  INFO 19764 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-05T01:24:42.893+05:30  INFO 19764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-05T01:24:42.896+05:30  INFO 19764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-05T01:24:42.949+05:30  WARN 19764 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-03-05T01:24:53.894+05:30  WARN 19764 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-03-05T01:25:21.560+05:30  INFO 19764 --- [http-nio-8080-exec-4] com.harshproject.HelmdemoApplication     : Starting HelmdemoApplication using Java 17.0.9 with PID 19764 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo)
+2024-03-05T01:25:21.561+05:30  INFO 19764 --- [http-nio-8080-exec-4] com.harshproject.HelmdemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-03-05T01:25:22.194+05:30  INFO 19764 --- [http-nio-8080-exec-4] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-05T01:25:22.197+05:30  INFO 19764 --- [http-nio-8080-exec-4] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-05T01:25:22.198+05:30  INFO 19764 --- [http-nio-8080-exec-4] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-05T01:25:22.240+05:30  INFO 19764 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-03-05T01:25:22.241+05:30  INFO 19764 --- [http-nio-8080-exec-4] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 672 ms
+2024-03-05T01:25:22.487+05:30  WARN 19764 --- [http-nio-8080-exec-4] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-03-05T01:25:22.521+05:30  INFO 19764 --- [http-nio-8080-exec-4] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-05T01:25:22.582+05:30 ERROR 19764 --- [http-nio-8080-exec-4] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

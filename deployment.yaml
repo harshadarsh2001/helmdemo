@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: department-spring-boot-docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: department-spring-boot-docker
+  template:
+    metadata:
+      labels:
+        app: department-spring-boot-docker
+    spec:
+      containers:
+        - name: department-spring-boot-docker
+          image: harshadarsh2001/department-spring-boot-docker
+          ports:
+            - containerPort: 8080

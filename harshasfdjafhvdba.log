@@ -1,0 +1,845 @@
+2024-02-29T00:23:10.494+05:30  INFO 10260 --- [main] c.h.DepartmentSpringbootApplication      : Starting DepartmentSpringbootApplication using Java 17.0.9 with PID 10260 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot)
+2024-02-29T00:23:10.518+05:30  INFO 10260 --- [main] c.h.DepartmentSpringbootApplication      : The following 1 profile is active: "rabbitmq"
+2024-02-29T00:23:13.380+05:30  INFO 10260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T00:23:13.387+05:30  INFO 10260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-29T00:23:13.862+05:30  INFO 10260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 452 ms. Found 2 JPA repository interfaces.
+2024-02-29T00:23:13.893+05:30  INFO 10260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T00:23:13.898+05:30  INFO 10260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-29T00:23:13.953+05:30  INFO 10260 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.DepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T00:23:13.955+05:30  INFO 10260 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.UserInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T00:23:13.956+05:30  INFO 10260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2024-02-29T00:23:16.123+05:30  INFO 10260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T00:23:16.142+05:30  INFO 10260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T00:23:16.143+05:30  INFO 10260 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-29T00:23:16.290+05:30  INFO 10260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T00:23:16.291+05:30  INFO 10260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5623 ms
+2024-02-29T00:23:17.538+05:30  INFO 10260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-29T00:23:17.648+05:30  INFO 10260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-29T00:23:17.722+05:30  INFO 10260 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-29T00:23:18.234+05:30  INFO 10260 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-29T00:23:18.289+05:30  INFO 10260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-29T00:23:18.978+05:30  INFO 10260 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c945ee7
+2024-02-29T00:23:18.982+05:30  INFO 10260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-29T00:23:19.102+05:30  WARN 10260 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-29T00:23:20.601+05:30  INFO 10260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-29T00:23:20.686+05:30  INFO 10260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-29T00:23:22.923+05:30  WARN 10260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-29T00:23:25.243+05:30  INFO 10260 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-02-29T00:23:25.467+05:30  INFO 10260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c00b341, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10658b31, org.springframework.security.web.context.SecurityContextHolderFilter@1c7094eb, org.springframework.security.web.header.HeaderWriterFilter@6dace32a, org.springframework.web.filter.CorsFilter@72ce2982, org.springframework.security.web.authentication.logout.LogoutFilter@129204bf, com.harshproject.filter.JwtAuthFilter@73c21b13, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ac23fe7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40a923e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d5399f4, org.springframework.security.web.session.SessionManagementFilter@55cbbf15, org.springframework.security.web.access.ExceptionTranslationFilter@3387d45e, org.springframework.security.web.access.intercept.AuthorizationFilter@6845dfcc]
+2024-02-29T00:23:27.016+05:30 DEBUG 10260 --- [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.harshproject.listener.Listener.receiveDepartmentMessage(java.lang.String) is class java.lang.String
+2024-02-29T00:23:27.050+05:30 DEBUG 10260 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-02-29T00:23:27.208+05:30  INFO 10260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T00:23:27.212+05:30 DEBUG 10260 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-02-29T00:23:27.220+05:30  INFO 10260 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-02-29T00:23:27.404+05:30  INFO 10260 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#28817763:0/SimpleConnection@248ad8a1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63449]
+2024-02-29T00:23:27.415+05:30 DEBUG 10260 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-02-29T00:23:27.449+05:30 DEBUG 10260 --- [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-02-29T00:23:27.472+05:30 DEBUG 10260 --- [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2053/0x0000000800c89780 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2040722f Shared Rabbit Connection: SimpleConnection@248ad8a1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63449]
+2024-02-29T00:23:27.474+05:30 DEBUG 10260 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'department-exchange'
+2024-02-29T00:23:27.494+05:30 DEBUG 10260 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'department-queue'
+2024-02-29T00:23:27.502+05:30 DEBUG 10260 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [department-queue (QUEUE)] to exchange [department-exchange] with routing key [myRoutingKey]
+2024-02-29T00:23:27.514+05:30 DEBUG 10260 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2024-02-29T00:23:27.535+05:30 DEBUG 10260 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2062/0x0000000800c8fd70 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2040722f Shared Rabbit Connection: SimpleConnection@248ad8a1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63449]
+2024-02-29T00:23:27.589+05:30 DEBUG 10260 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@e2931b1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:23:27.610+05:30 DEBUG 10260 --- [pool-3-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@e2931b1: tags=[[amq.ctag-7KC_ezhLRcUIfdij3UWIag]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2040722f Shared Rabbit Connection: SimpleConnection@248ad8a1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63449], acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:23:27.610+05:30 DEBUG 10260 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'department-queue' with tag amq.ctag-7KC_ezhLRcUIfdij3UWIag: Consumer@e2931b1: tags=[[amq.ctag-7KC_ezhLRcUIfdij3UWIag]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2040722f Shared Rabbit Connection: SimpleConnection@248ad8a1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63449], acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:23:27.664+05:30  INFO 10260 --- [main] c.h.DepartmentSpringbootApplication      : Started DepartmentSpringbootApplication in 17.965 seconds (process running for 18.814)
+2024-02-29T00:23:30.323+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:23:40.088+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:23:50.094+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:24:00.279+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:24:10.054+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:24:14.595+05:30  INFO 10260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T00:24:14.595+05:30  INFO 10260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T00:24:14.605+05:30  INFO 10260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-02-29T00:24:20.118+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:24:20.538+05:30  INFO 10260 --- [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1116 ms
+2024-02-29T00:24:30.106+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:24:40.042+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:24:50.040+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:25:00.103+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:25:00.140+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T00:25:10.069+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:25:20.083+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:25:30.057+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:25:40.095+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:25:50.076+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:26:00.088+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:26:10.056+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:26:20.069+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:26:30.076+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:26:40.072+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:26:50.067+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:27:00.082+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:27:07.665+05:30 DEBUG 10260 --- [http-nio-8080-exec-9] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,2)
+2024-02-29T00:27:07.665+05:30 DEBUG 10260 --- [http-nio-8080-exec-9] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitHealthIndicator$$Lambda$2429/0x0000000800dff1b8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@2040722f Shared Rabbit Connection: SimpleConnection@248ad8a1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63449]
+2024-02-29T00:27:08.765+05:30  WARN 10260 --- [http-nio-8080-exec-9] o.s.b.a.data.redis.RedisHealthIndicator  : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1805) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1736) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1538) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1518) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1478) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1515) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1199) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:1006) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:194) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:143) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:104) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:91) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.data.redis.RedisHealthIndicator.doHealthCheck(RedisHealthIndicator.java:49) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.1.2.jar:6.1.2]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:321) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:428) ~[spring-boot-actuator-3.2.1.jar:3.2.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at com.harshproject.filter.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:52) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225) ~[spring-security-config-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-6.3.0.RELEASE.jar:6.3.0.RELEASE/9bb1669]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-6.3.0.RELEASE.jar:6.3.0.RELEASE/9bb1669]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:350) ~[lettuce-core-6.3.0.RELEASE.jar:6.3.0.RELEASE/9bb1669]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:215) ~[lettuce-core-6.3.0.RELEASE.jar:6.3.0.RELEASE/9bb1669]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1734) ~[spring-data-redis-3.2.1.jar:3.2.1]
+	... 169 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337) ~[netty-transport-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335) ~[netty-transport-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776) ~[netty-transport-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.104.Final.jar:4.1.104.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.104.Final.jar:4.1.104.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-02-29T00:27:10.043+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:27:20.062+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:27:30.065+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:27:40.056+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:27:50.075+05:30  INFO 10260 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:28:00.713+05:30  INFO 18012 --- [main] c.h.DepartmentSpringbootApplication      : Starting DepartmentSpringbootApplication using Java 17.0.9 with PID 18012 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot)
+2024-02-29T00:28:00.718+05:30  INFO 18012 --- [main] c.h.DepartmentSpringbootApplication      : The following 1 profile is active: "rabbitmq"
+2024-02-29T00:28:03.205+05:30  INFO 18012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T00:28:03.210+05:30  INFO 18012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-29T00:28:03.506+05:30  INFO 18012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 275 ms. Found 2 JPA repository interfaces.
+2024-02-29T00:28:03.537+05:30  INFO 18012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T00:28:03.540+05:30  INFO 18012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-29T00:28:03.577+05:30  INFO 18012 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.DepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T00:28:03.578+05:30  INFO 18012 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.UserInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T00:28:03.578+05:30  INFO 18012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-02-29T00:28:05.555+05:30  INFO 18012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T00:28:05.571+05:30  INFO 18012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T00:28:05.572+05:30  INFO 18012 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-29T00:28:05.778+05:30  INFO 18012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T00:28:05.778+05:30  INFO 18012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4927 ms
+2024-02-29T00:28:07.044+05:30  INFO 18012 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-29T00:28:07.197+05:30  INFO 18012 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-29T00:28:07.293+05:30  INFO 18012 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-29T00:28:08.037+05:30  INFO 18012 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-29T00:28:08.112+05:30  INFO 18012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-29T00:28:08.718+05:30  INFO 18012 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@461b38ca
+2024-02-29T00:28:08.722+05:30  INFO 18012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-29T00:28:08.836+05:30  WARN 18012 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-29T00:28:10.400+05:30  INFO 18012 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-29T00:28:10.465+05:30  INFO 18012 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-29T00:28:12.589+05:30  WARN 18012 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-29T00:28:14.916+05:30  INFO 18012 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-02-29T00:28:15.149+05:30  INFO 18012 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@618cfd1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ec3c680, org.springframework.security.web.context.SecurityContextHolderFilter@77070012, org.springframework.security.web.header.HeaderWriterFilter@5d81bc79, org.springframework.web.filter.CorsFilter@5cb7eb6c, org.springframework.security.web.authentication.logout.LogoutFilter@35b799c0, com.harshproject.filter.JwtAuthFilter@74c919b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40c7cea8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10009505, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46110b82, org.springframework.security.web.session.SessionManagementFilter@3387d45e, org.springframework.security.web.access.ExceptionTranslationFilter@30ee1a38, org.springframework.security.web.access.intercept.AuthorizationFilter@73c337e9]
+2024-02-29T00:28:16.817+05:30 DEBUG 18012 --- [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.harshproject.listener.Listener.receiveDepartmentMessage(java.lang.String) is class java.lang.String
+2024-02-29T00:28:16.839+05:30 DEBUG 18012 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-02-29T00:28:16.994+05:30  INFO 18012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T00:28:17.000+05:30 DEBUG 18012 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-02-29T00:28:17.010+05:30  INFO 18012 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-02-29T00:28:17.133+05:30  INFO 18012 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#11a9f958:0/SimpleConnection@70b9cdcc [delegate=amqp://guest@127.0.0.1:5672/, localPort=63672]
+2024-02-29T00:28:17.141+05:30 DEBUG 18012 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-02-29T00:28:17.166+05:30 DEBUG 18012 --- [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-02-29T00:28:17.182+05:30 DEBUG 18012 --- [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2058/0x0000000800c99138 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5fefb35c Shared Rabbit Connection: SimpleConnection@70b9cdcc [delegate=amqp://guest@127.0.0.1:5672/, localPort=63672]
+2024-02-29T00:28:17.183+05:30 DEBUG 18012 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'department-exchange'
+2024-02-29T00:28:17.207+05:30 DEBUG 18012 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'department-queue'
+2024-02-29T00:28:17.212+05:30 DEBUG 18012 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [department-queue (QUEUE)] to exchange [department-exchange] with routing key [myRoutingKey]
+2024-02-29T00:28:17.216+05:30 DEBUG 18012 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2024-02-29T00:28:17.228+05:30 DEBUG 18012 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2067/0x0000000800c9f728 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5fefb35c Shared Rabbit Connection: SimpleConnection@70b9cdcc [delegate=amqp://guest@127.0.0.1:5672/, localPort=63672]
+2024-02-29T00:28:17.240+05:30 DEBUG 18012 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@7439cf4b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:28:17.268+05:30 DEBUG 18012 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'department-queue' with tag amq.ctag-J5CfdzPjlvGTD6HwH7DZcg: Consumer@7439cf4b: tags=[[amq.ctag-J5CfdzPjlvGTD6HwH7DZcg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5fefb35c Shared Rabbit Connection: SimpleConnection@70b9cdcc [delegate=amqp://guest@127.0.0.1:5672/, localPort=63672], acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:28:17.269+05:30 DEBUG 18012 --- [pool-3-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@7439cf4b: tags=[[amq.ctag-J5CfdzPjlvGTD6HwH7DZcg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5fefb35c Shared Rabbit Connection: SimpleConnection@70b9cdcc [delegate=amqp://guest@127.0.0.1:5672/, localPort=63672], acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:28:17.319+05:30  INFO 18012 --- [main] c.h.DepartmentSpringbootApplication      : Started DepartmentSpringbootApplication in 17.389 seconds (process running for 18.203)
+2024-02-29T00:28:20.214+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:28:22.002+05:30  INFO 18012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T00:28:22.003+05:30  INFO 18012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T00:28:22.007+05:30  INFO 18012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-02-29T00:28:23.732+05:30  INFO 18012 --- [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 817 ms
+2024-02-29T00:28:30.110+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:28:40.031+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:28:50.066+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:29:00.082+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:29:10.064+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:29:20.057+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:29:30.052+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:29:40.058+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:29:50.080+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:30:00.097+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:30:00.132+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 30 minutes: Scheduled Task 2
+2024-02-29T00:30:00.169+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T00:30:10.072+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:30:20.058+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:30:30.041+05:30  INFO 18012 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:30:47.575+05:30  INFO 32600 --- [main] c.h.DepartmentSpringbootApplication      : Starting DepartmentSpringbootApplication using Java 17.0.9 with PID 32600 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot)
+2024-02-29T00:30:47.581+05:30  INFO 32600 --- [main] c.h.DepartmentSpringbootApplication      : The following 1 profile is active: "rabbitmq"
+2024-02-29T00:30:50.248+05:30  INFO 32600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T00:30:50.251+05:30  INFO 32600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-29T00:30:50.553+05:30  INFO 32600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 280 ms. Found 2 JPA repository interfaces.
+2024-02-29T00:30:50.582+05:30  INFO 32600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T00:30:50.585+05:30  INFO 32600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-29T00:30:50.628+05:30  INFO 32600 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.DepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T00:30:50.631+05:30  INFO 32600 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.UserInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T00:30:50.632+05:30  INFO 32600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2024-02-29T00:30:52.588+05:30  INFO 32600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T00:30:52.622+05:30  INFO 32600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T00:30:52.623+05:30  INFO 32600 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-29T00:30:52.883+05:30  INFO 32600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T00:30:52.885+05:30  INFO 32600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5173 ms
+2024-02-29T00:30:54.326+05:30  INFO 32600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-29T00:30:54.446+05:30  INFO 32600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-29T00:30:54.513+05:30  INFO 32600 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-29T00:30:55.045+05:30  INFO 32600 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-29T00:30:55.121+05:30  INFO 32600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-29T00:30:56.030+05:30  INFO 32600 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c0d7099
+2024-02-29T00:30:56.033+05:30  INFO 32600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-29T00:30:56.143+05:30  WARN 32600 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-29T00:30:58.084+05:30  INFO 32600 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-29T00:30:58.194+05:30  INFO 32600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-29T00:31:00.882+05:30  WARN 32600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-29T00:31:05.100+05:30  INFO 32600 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-02-29T00:31:05.375+05:30  INFO 32600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f37f6b6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cb3e76c, org.springframework.security.web.context.SecurityContextHolderFilter@a538180, org.springframework.security.web.header.HeaderWriterFilter@2703fabd, org.springframework.web.filter.CorsFilter@64d711b0, org.springframework.security.web.authentication.logout.LogoutFilter@13258770, com.harshproject.filter.JwtAuthFilter@5536542e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55cbbf15, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43493a5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4df4f611, org.springframework.security.web.session.SessionManagementFilter@10009505, org.springframework.security.web.access.ExceptionTranslationFilter@2927d781, org.springframework.security.web.access.intercept.AuthorizationFilter@3669d7ac]
+2024-02-29T00:31:08.381+05:30 DEBUG 32600 --- [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.harshproject.listener.Listener.receiveDepartmentMessage(java.lang.String) is class java.lang.String
+2024-02-29T00:31:08.414+05:30 DEBUG 32600 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-02-29T00:31:08.569+05:30  INFO 32600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T00:31:08.582+05:30 DEBUG 32600 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-02-29T00:31:08.591+05:30  INFO 32600 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-02-29T00:31:08.730+05:30  INFO 32600 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6f272dc4:0/SimpleConnection@1ca0546a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63787]
+2024-02-29T00:31:08.748+05:30 DEBUG 32600 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-02-29T00:31:08.798+05:30 DEBUG 32600 --- [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-02-29T00:31:08.826+05:30 DEBUG 32600 --- [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2053/0x0000000800ca3a20 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5596f2bb Shared Rabbit Connection: SimpleConnection@1ca0546a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63787]
+2024-02-29T00:31:08.830+05:30 DEBUG 32600 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'department-exchange'
+2024-02-29T00:31:08.834+05:30 DEBUG 32600 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'department-queue'
+2024-02-29T00:31:08.840+05:30 DEBUG 32600 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [department-queue (QUEUE)] to exchange [department-exchange] with routing key [myRoutingKey]
+2024-02-29T00:31:08.846+05:30 DEBUG 32600 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2024-02-29T00:31:08.863+05:30  INFO 32600 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T00:31:08.863+05:30  INFO 32600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T00:31:08.869+05:30  INFO 32600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-02-29T00:31:08.869+05:30 DEBUG 32600 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2064/0x0000000800cb8230 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5596f2bb Shared Rabbit Connection: SimpleConnection@1ca0546a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63787]
+2024-02-29T00:31:08.892+05:30 DEBUG 32600 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@4ee5d723: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:31:08.920+05:30 DEBUG 32600 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'department-queue' with tag amq.ctag--qPrvyGCY82Hkv0PNGuA-A: Consumer@4ee5d723: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5596f2bb Shared Rabbit Connection: SimpleConnection@1ca0546a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63787], acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:31:08.920+05:30 DEBUG 32600 --- [pool-3-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@4ee5d723: tags=[[amq.ctag--qPrvyGCY82Hkv0PNGuA-A]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5596f2bb Shared Rabbit Connection: SimpleConnection@1ca0546a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63787], acknowledgeMode=AUTO local queue size=0
+2024-02-29T00:31:08.979+05:30  INFO 32600 --- [main] c.h.DepartmentSpringbootApplication      : Started DepartmentSpringbootApplication in 22.164 seconds (process running for 23.057)
+2024-02-29T00:31:10.321+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:31:10.901+05:30  INFO 32600 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1043 ms
+2024-02-29T00:31:20.045+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:31:30.055+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:31:40.037+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:31:50.037+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:32:00.039+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T00:32:10.072+05:30  INFO 32600 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:25:39.687+05:30  INFO 31812 --- [main] c.h.DepartmentSpringbootApplication      : Starting DepartmentSpringbootApplication using Java 17.0.9 with PID 31812 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot)
+2024-02-29T01:25:39.695+05:30  INFO 31812 --- [main] c.h.DepartmentSpringbootApplication      : The following 1 profile is active: "rabbitmq"
+2024-02-29T01:25:42.007+05:30  INFO 31812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T01:25:42.012+05:30  INFO 31812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-29T01:25:42.332+05:30  INFO 31812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 304 ms. Found 2 JPA repository interfaces.
+2024-02-29T01:25:42.360+05:30  INFO 31812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T01:25:42.362+05:30  INFO 31812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-29T01:25:42.395+05:30  INFO 31812 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.DepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T01:25:42.396+05:30  INFO 31812 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.UserInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T01:25:42.396+05:30  INFO 31812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-02-29T01:25:43.966+05:30  INFO 31812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T01:25:44.002+05:30  INFO 31812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T01:25:44.003+05:30  INFO 31812 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-29T01:25:44.164+05:30  INFO 31812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T01:25:44.165+05:30  INFO 31812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4370 ms
+2024-02-29T01:25:45.186+05:30  INFO 31812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-29T01:25:45.297+05:30  INFO 31812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-29T01:25:45.362+05:30  INFO 31812 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-29T01:25:45.786+05:30  INFO 31812 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-29T01:25:45.839+05:30  INFO 31812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-29T01:25:46.400+05:30  INFO 31812 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b9d602c
+2024-02-29T01:25:46.403+05:30  INFO 31812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-29T01:25:46.495+05:30  WARN 31812 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-29T01:25:47.866+05:30  INFO 31812 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-29T01:25:47.966+05:30  INFO 31812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-29T01:25:49.896+05:30  WARN 31812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-29T01:25:54.194+05:30  INFO 31812 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-02-29T01:25:54.750+05:30  INFO 31812 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ae729fb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5513982, org.springframework.security.web.context.SecurityContextHolderFilter@4431233f, org.springframework.security.web.header.HeaderWriterFilter@510ee215, org.springframework.web.filter.CorsFilter@22351330, org.springframework.security.web.authentication.logout.LogoutFilter@2919976e, com.harshproject.filter.JwtAuthFilter@46875fae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fae279e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28e9f6b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2158d1d1, org.springframework.security.web.session.SessionManagementFilter@6b8f0b64, org.springframework.security.web.access.ExceptionTranslationFilter@25082311, org.springframework.security.web.access.intercept.AuthorizationFilter@6ca6a1a6]
+2024-02-29T01:25:57.280+05:30 DEBUG 31812 --- [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.harshproject.listener.Listener.receiveDepartmentMessage(java.lang.String) is class java.lang.String
+2024-02-29T01:25:57.302+05:30 DEBUG 31812 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-02-29T01:25:57.416+05:30  INFO 31812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T01:25:57.419+05:30 DEBUG 31812 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-02-29T01:25:57.425+05:30  INFO 31812 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-02-29T01:25:57.608+05:30  INFO 31812 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#e8c381e:0/SimpleConnection@791ff1b9 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55797]
+2024-02-29T01:25:57.616+05:30 DEBUG 31812 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-02-29T01:25:57.644+05:30 DEBUG 31812 --- [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-02-29T01:25:57.665+05:30 DEBUG 31812 --- [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2052/0x0000000800c96b90 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@734df10b Shared Rabbit Connection: SimpleConnection@791ff1b9 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55797]
+2024-02-29T01:25:57.666+05:30 DEBUG 31812 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'department-exchange'
+2024-02-29T01:25:57.736+05:30 DEBUG 31812 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'department-queue'
+2024-02-29T01:25:57.744+05:30 DEBUG 31812 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [department-queue (QUEUE)] to exchange [department-exchange] with routing key [myRoutingKey]
+2024-02-29T01:25:57.757+05:30 DEBUG 31812 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2024-02-29T01:25:57.774+05:30 DEBUG 31812 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2061/0x0000000800c9cff0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@734df10b Shared Rabbit Connection: SimpleConnection@791ff1b9 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55797]
+2024-02-29T01:25:57.787+05:30 DEBUG 31812 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@73852c7c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-02-29T01:25:57.849+05:30 DEBUG 31812 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'department-queue' with tag amq.ctag-t8In5l4QHfItCOhYd0t5uQ: Consumer@73852c7c: tags=[[amq.ctag-t8In5l4QHfItCOhYd0t5uQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@734df10b Shared Rabbit Connection: SimpleConnection@791ff1b9 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55797], acknowledgeMode=AUTO local queue size=0
+2024-02-29T01:25:57.849+05:30 DEBUG 31812 --- [pool-3-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@73852c7c: tags=[[amq.ctag-t8In5l4QHfItCOhYd0t5uQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@734df10b Shared Rabbit Connection: SimpleConnection@791ff1b9 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55797], acknowledgeMode=AUTO local queue size=0
+2024-02-29T01:25:57.890+05:30  INFO 31812 --- [main] c.h.DepartmentSpringbootApplication      : Started DepartmentSpringbootApplication in 19.003 seconds (process running for 19.81)
+2024-02-29T01:26:00.433+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:26:04.388+05:30  INFO 31812 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T01:26:04.389+05:30  INFO 31812 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T01:26:04.395+05:30  INFO 31812 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2024-02-29T01:26:10.057+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:26:20.077+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:26:30.061+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:26:40.107+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:26:50.146+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T01:27:00.060+05:30  INFO 31812 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:37:50.562+05:30  INFO 17656 --- [main] c.h.DepartmentSpringbootApplication      : Starting DepartmentSpringbootApplication using Java 17.0.9 with PID 17656 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\DepartmentSpringboot)
+2024-02-29T10:37:50.570+05:30  INFO 17656 --- [main] c.h.DepartmentSpringbootApplication      : The following 1 profile is active: "rabbitmq"
+2024-02-29T10:37:56.277+05:30  INFO 17656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T10:37:56.287+05:30  INFO 17656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-29T10:37:57.247+05:30  INFO 17656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 918 ms. Found 2 JPA repository interfaces.
+2024-02-29T10:37:57.324+05:30  INFO 17656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-29T10:37:57.331+05:30  INFO 17656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-02-29T10:37:57.418+05:30  INFO 17656 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.DepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T10:37:57.420+05:30  INFO 17656 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.harshproject.repository.UserInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-02-29T10:37:57.421+05:30  INFO 17656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2024-02-29T10:38:05.944+05:30  INFO 17656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T10:38:06.001+05:30  INFO 17656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T10:38:06.004+05:30  INFO 17656 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-02-29T10:38:06.570+05:30  INFO 17656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T10:38:06.571+05:30  INFO 17656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 15769 ms
+2024-02-29T10:38:10.157+05:30  INFO 17656 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-29T10:38:10.452+05:30  INFO 17656 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-29T10:38:10.633+05:30  INFO 17656 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-29T10:38:11.769+05:30  INFO 17656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-29T10:38:11.929+05:30  INFO 17656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-29T10:38:13.369+05:30  INFO 17656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8f8717b
+2024-02-29T10:38:13.375+05:30  INFO 17656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-29T10:38:13.660+05:30  WARN 17656 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-29T10:38:16.888+05:30  INFO 17656 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-29T10:38:17.050+05:30  INFO 17656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-29T10:38:25.029+05:30  WARN 17656 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-29T10:38:37.101+05:30  INFO 17656 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-02-29T10:38:37.786+05:30  INFO 17656 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e32261f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7414167a, org.springframework.security.web.context.SecurityContextHolderFilter@2927d781, org.springframework.security.web.header.HeaderWriterFilter@260f8704, org.springframework.web.filter.CorsFilter@13258770, org.springframework.security.web.authentication.logout.LogoutFilter@60319a00, com.harshproject.filter.JwtAuthFilter@64df3f4b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28e9f6b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2703fabd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d8fcde8, org.springframework.security.web.session.SessionManagementFilter@5d81bc79, org.springframework.security.web.access.ExceptionTranslationFilter@1ed43328, org.springframework.security.web.access.intercept.AuthorizationFilter@75eed00f]
+2024-02-29T10:38:42.659+05:30 DEBUG 17656 --- [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.harshproject.listener.Listener.receiveDepartmentMessage(java.lang.String) is class java.lang.String
+2024-02-29T10:38:42.711+05:30 DEBUG 17656 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-02-29T10:38:43.033+05:30  INFO 17656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T10:38:43.042+05:30 DEBUG 17656 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-02-29T10:38:43.063+05:30  INFO 17656 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-02-29T10:38:43.309+05:30  INFO 17656 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#43eea3bd:0/SimpleConnection@24b2e53b [delegate=amqp://guest@127.0.0.1:5672/, localPort=52197]
+2024-02-29T10:38:43.320+05:30 DEBUG 17656 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-02-29T10:38:43.384+05:30 DEBUG 17656 --- [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-02-29T10:38:43.421+05:30 DEBUG 17656 --- [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2059/0x0000000800c97de0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@47955046 Shared Rabbit Connection: SimpleConnection@24b2e53b [delegate=amqp://guest@127.0.0.1:5672/, localPort=52197]
+2024-02-29T10:38:43.422+05:30 DEBUG 17656 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'department-exchange'
+2024-02-29T10:38:43.436+05:30 DEBUG 17656 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'department-queue'
+2024-02-29T10:38:43.445+05:30 DEBUG 17656 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [department-queue (QUEUE)] to exchange [department-exchange] with routing key [myRoutingKey]
+2024-02-29T10:38:43.460+05:30 DEBUG 17656 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2024-02-29T10:38:43.490+05:30 DEBUG 17656 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$2068/0x0000000800c9e3d0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@47955046 Shared Rabbit Connection: SimpleConnection@24b2e53b [delegate=amqp://guest@127.0.0.1:5672/, localPort=52197]
+2024-02-29T10:38:43.511+05:30 DEBUG 17656 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@575b9b92: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-02-29T10:38:43.540+05:30 DEBUG 17656 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'department-queue' with tag amq.ctag-PEDUoR7cTcVf_2Fs6006YQ: Consumer@575b9b92: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@47955046 Shared Rabbit Connection: SimpleConnection@24b2e53b [delegate=amqp://guest@127.0.0.1:5672/, localPort=52197], acknowledgeMode=AUTO local queue size=0
+2024-02-29T10:38:43.541+05:30 DEBUG 17656 --- [pool-3-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@575b9b92: tags=[[amq.ctag-PEDUoR7cTcVf_2Fs6006YQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@47955046 Shared Rabbit Connection: SimpleConnection@24b2e53b [delegate=amqp://guest@127.0.0.1:5672/, localPort=52197], acknowledgeMode=AUTO local queue size=0
+2024-02-29T10:38:43.647+05:30  INFO 17656 --- [main] c.h.DepartmentSpringbootApplication      : Started DepartmentSpringbootApplication in 54.816 seconds (process running for 57.621)
+2024-02-29T10:38:45.446+05:30  INFO 17656 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T10:38:45.447+05:30  INFO 17656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T10:38:45.456+05:30  INFO 17656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-02-29T10:38:53.187+05:30  INFO 17656 --- [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 4543 ms
+2024-02-29T10:38:53.789+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:39:00.074+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:39:10.054+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:39:20.082+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:39:30.065+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:39:40.121+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:39:50.052+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:40:00.061+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:40:00.107+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T10:40:10.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:40:20.043+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:40:30.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:40:40.058+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:40:50.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:41:00.069+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:41:10.061+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:41:20.069+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:41:30.057+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:41:40.082+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:41:50.054+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:42:00.109+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:42:10.064+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:42:20.054+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:42:30.066+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:42:40.051+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:42:50.078+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:43:00.068+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:43:10.065+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:43:20.096+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:43:30.064+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:43:40.054+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:43:50.057+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:44:00.071+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:44:10.059+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:44:20.053+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:44:30.056+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:44:40.088+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:44:50.104+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:45:00.080+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:45:00.117+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T10:45:10.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:45:20.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:45:30.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:45:40.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:45:50.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:46:00.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:46:10.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:46:20.051+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:46:30.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:46:40.048+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:46:50.055+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:47:00.048+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:47:10.038+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:47:20.059+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:47:30.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:47:40.033+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:47:50.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:48:00.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:48:10.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:48:20.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:48:30.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:48:40.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:48:50.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:49:00.041+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:49:10.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:49:20.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:49:30.065+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:49:40.047+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:49:50.036+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:50:00.046+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:50:00.086+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T10:50:10.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:50:20.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:50:30.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:50:40.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:50:50.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:51:00.043+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:51:10.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:51:20.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:51:30.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:51:40.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:51:50.043+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:52:00.038+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:52:10.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:52:20.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:52:30.047+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:52:40.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:52:50.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:53:00.053+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:53:10.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:53:20.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:53:30.034+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:53:40.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:53:50.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:54:00.048+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:54:10.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:54:20.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:54:30.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:54:40.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:54:50.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:55:00.063+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:55:00.095+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T10:55:10.050+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:55:20.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:55:30.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:55:40.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:55:50.034+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:56:00.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:56:10.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:56:20.033+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:56:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:56:40.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:56:50.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:57:00.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:57:10.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:57:20.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:57:30.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:57:40.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:57:50.039+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:58:00.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:58:10.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:58:20.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:58:30.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:58:40.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:58:50.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:59:00.041+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:59:10.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:59:20.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:59:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:59:40.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T10:59:50.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:00:00.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:00:00.071+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T11:00:00.105+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 1 hr: Scheduled Task 3
+2024-02-29T11:00:00.143+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 30 minutes: Scheduled Task 2
+2024-02-29T11:00:10.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:00:20.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:00:30.021+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:00:40.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:00:50.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:01:00.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:01:10.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:01:20.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:01:30.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:01:40.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:01:50.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:02:00.055+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:02:10.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:02:20.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:02:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:02:40.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:02:50.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:03:00.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:03:10.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:03:20.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:03:30.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:03:40.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:03:50.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:04:00.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:04:10.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:04:20.034+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:04:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:04:40.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:04:50.021+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:05:00.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:05:00.087+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T11:05:10.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:05:20.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:05:30.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:05:40.039+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:05:50.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:06:00.046+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:06:10.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:06:20.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:06:30.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:06:40.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:06:50.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:07:00.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:07:10.039+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:07:20.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:07:30.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:07:40.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:07:50.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:08:00.054+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:08:10.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:08:20.043+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:08:30.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:08:40.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:08:50.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:09:00.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:09:10.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:09:20.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:09:30.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:09:40.034+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:09:50.055+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:10:00.052+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:10:00.082+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T11:10:10.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:10:20.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:10:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:10:40.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:10:50.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:11:00.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:11:10.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:11:20.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:11:30.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:11:40.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:11:50.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:12:00.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:12:10.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:12:20.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:12:30.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:12:40.020+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:12:50.021+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:13:00.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:13:10.047+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:13:20.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:13:30.034+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:13:40.021+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:13:50.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:14:00.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:14:10.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:14:20.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:14:30.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:14:40.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:14:50.039+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:15:00.043+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:15:00.075+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T11:15:10.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:15:20.038+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:15:30.029+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:15:40.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:15:50.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:16:00.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:16:10.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:16:20.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:16:30.048+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:16:40.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:16:50.056+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:17:00.064+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:17:10.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:17:20.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:17:30.063+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:17:40.033+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:17:50.041+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:18:00.053+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:18:10.038+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:18:20.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:18:30.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:18:40.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:18:50.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:19:00.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:19:10.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:19:20.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:19:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:19:40.048+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:19:50.028+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:20:00.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:20:00.066+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T11:20:10.033+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:20:20.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:20:30.041+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:20:40.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:20:50.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:21:00.576+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:21:10.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:21:20.051+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:21:30.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:21:40.030+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:21:50.403+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:22:00.051+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:22:10.041+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:22:20.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:22:30.024+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:22:40.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:22:50.052+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:23:00.032+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:23:10.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:23:20.038+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:23:30.023+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:23:40.022+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:23:50.033+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:24:00.049+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:24:10.087+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:24:20.042+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:24:30.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:24:40.044+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:24:50.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:25:00.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:25:00.083+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 5 minutes: Scheduled Task 1
+2024-02-29T11:25:10.074+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:25:20.033+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:25:30.035+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:25:40.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:25:50.031+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:26:00.041+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:26:10.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:26:20.025+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:26:30.034+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:26:40.036+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:26:50.026+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:27:00.047+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:27:10.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:27:20.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:27:30.027+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:27:40.043+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:27:50.037+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:28:00.040+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T11:28:10.045+05:30  INFO 17656 --- [scheduling-1] c.h.scheduler.SchedulerComponent         : Displaying message every 10 sec: Scheduled Task 0
+2024-02-29T12:19:53.752+05:30  INFO 27412 --- [main] c.harshproject.HelmdemoApplicationTests  : Starting HelmdemoApplicationTests using Java 17.0.9 with PID 27412 (started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo)
+2024-02-29T12:19:53.760+05:30  INFO 27412 --- [main] c.harshproject.HelmdemoApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-02-29T12:19:58.862+05:30  INFO 27412 --- [main] c.harshproject.HelmdemoApplicationTests  : Started HelmdemoApplicationTests in 6.75 seconds (process running for 15.729)
+2024-02-29T12:36:40.134+05:30  INFO 30804 --- [main] com.harshproject.HelmdemoApplication     : Starting HelmdemoApplication using Java 17.0.9 with PID 30804 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo)
+2024-02-29T12:36:40.161+05:30  INFO 30804 --- [main] com.harshproject.HelmdemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-02-29T12:36:47.259+05:30  INFO 30804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T12:36:47.358+05:30  INFO 30804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T12:36:47.360+05:30  INFO 30804 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-29T12:36:47.923+05:30  INFO 30804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T12:36:47.925+05:30  INFO 30804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7495 ms
+2024-02-29T12:36:51.430+05:30  INFO 30804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T12:36:51.501+05:30  INFO 30804 --- [main] com.harshproject.HelmdemoApplication     : Started HelmdemoApplication in 13.865 seconds (process running for 15.319)
+2024-02-29T12:37:10.619+05:30  INFO 30804 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T12:37:10.619+05:30  INFO 30804 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T12:37:10.619+05:30  INFO 30804 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-02-29T14:17:07.427+05:30  INFO 32580 --- [main] com.harshproject.HelmdemoApplication     : Starting HelmdemoApplication using Java 17.0.9 with PID 32580 (C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo\target\classes started by AdarshHa in C:\Users\AdarshHa\Documents\workspace-spring-tool-suite-4-4.21.0.RELEASE\helmdemo)
+2024-02-29T14:17:07.438+05:30  INFO 32580 --- [main] com.harshproject.HelmdemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-02-29T14:17:10.591+05:30  INFO 32580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-29T14:17:10.632+05:30  INFO 32580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-29T14:17:10.633+05:30  INFO 32580 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-29T14:17:10.868+05:30  INFO 32580 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-29T14:17:10.870+05:30  INFO 32580 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3274 ms
+2024-02-29T14:17:12.039+05:30  INFO 32580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-29T14:17:12.067+05:30  INFO 32580 --- [main] com.harshproject.HelmdemoApplication     : Started HelmdemoApplication in 5.891 seconds (process running for 7.351)
+2024-02-29T14:17:18.376+05:30  INFO 32580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-29T14:17:18.377+05:30  INFO 32580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-29T14:17:18.380+05:30  INFO 32580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
